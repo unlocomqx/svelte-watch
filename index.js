@@ -34,4 +34,9 @@ root.addEventListener("SvelteRegisterComponent", (e) => {
       injectState(JSON.parse(message.state));
     }
   });
+
+  component.$$.on_destroy.push(() => {
+    devTools.unsubscribe();
+    devTools = null;
+  });
 });
