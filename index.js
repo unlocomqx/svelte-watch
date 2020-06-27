@@ -20,12 +20,11 @@ root.addEventListener("SvelteRegisterComponent", (e) => {
   let captureState = component.$capture_state;
   let injectState = component.$inject_state;
   devTools.init(captureState());
-  component.$$.after_update.push(() => {
+  component.$$.before_update.push(() => {
     if (send) {
-      devTools.send(tagName, captureState());
-    } else {
-      send = true;
+      devTools.send("update", captureState());
     }
+    send = true;
   });
 
   devTools.subscribe(function (message) {
