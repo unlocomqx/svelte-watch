@@ -14,8 +14,9 @@ function connectToDevTools(componentName) {
 root.addEventListener("SvelteRegisterComponent", (e) => {
   let send = true;
 
-  let {component, tagName} = e.detail;
-  var devTools = connectToDevTools(tagName);
+  let {component, tagName, options} = e.detail;
+  let serializedProps = JSON.stringify(options.props);
+  var devTools = connectToDevTools(`${tagName} ${serializedProps || ''}`);
   let captureState = component.$capture_state;
   let injectState = component.$inject_state;
   devTools.init(captureState());
