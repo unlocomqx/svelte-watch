@@ -28,7 +28,7 @@ root.addEventListener("SvelteRegisterComponent", (e) => {
   devTools.init(captureState());
   component.$$.after_update.push(() => {
     if (send) {
-      devTools.send("update", captureState());
+      devTools.send(`update ${tagName}`, captureState());
     }
     send = true;
   });
