@@ -1,0 +1,23 @@
+{
+  "name": "svelte-watch",
+  "version": "1.0.0",
+  "description": "Monitor Svelte components state using Redux Devtools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unlocomqx/svelte-watch.git"
+  },
+  "keywords": [
+    "svelte",
+    "redux"
+  ],
+  "author": "Tuni-Soft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unlocomqx/svelte-watch/issues"
+  },
+  "homepage": "https://github.com/unlocomqx/svelte-watch#readme"
+}
