@@ -1,7 +1,7 @@
 const root = window.document;
 
 function trimString(string, length) {
-  return string.length > length ?
+  return string && string.length > length ?
     string.substring(0, length) + "..." :
     string;
 };
