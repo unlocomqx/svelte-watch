@@ -1,5 +1,11 @@
 const root = window.document;
 
+function trimString(string, length) {
+  return string.length > length ?
+    string.substring(0, length) + "..." :
+    string;
+};
+
 function connectToDevTools(componentName) {
   // connect to redux devtools
   var devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__.connect({
@@ -16,7 +22,7 @@ root.addEventListener("SvelteRegisterComponent", (e) => {
 
   let {component, tagName, options} = e.detail;
   let serializedProps = JSON.stringify(options.props);
-  var devTools = connectToDevTools(`${tagName} ${serializedProps || ""}`);
+  var devTools = connectToDevTools(`${tagName} ${trimString(serializedProps, 100) || ""}`);
   let captureState = component.$capture_state;
   let injectState = component.$inject_state;
   devTools.init(captureState());
