@@ -20,11 +20,11 @@ import "svelte-watch";
 
 ## Screenshots
 
-### Event list
+##### Event list
 ![Event list](./screenshots/events.png)
 
-### Components list
+##### Components list
 ![Event list](./screenshots/instances.png)
 
-### State log
+##### State log
 ![Event list](./screenshots/log.png)
