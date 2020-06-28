@@ -2,6 +2,8 @@
 
 Monitor Svelte components state using Redux Devtools
 
+[<img src="https://img.shields.io/npm/v/svelte-watch">](https://www.npmjs.com/package/svelte-watch)
+
 ## Installation
 
 ```bash
