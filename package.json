@@ -1,6 +1,6 @@
 {
   "name": "svelte-watch",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Monitor Svelte components state using Redux Devtools",
   "main": "index.js",
   "scripts": {
