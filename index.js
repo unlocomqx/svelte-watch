@@ -1,5 +1,3 @@
-const root = window.document;
-
 function trimString(string, length) {
   return string && string.length > length ?
     string.substring(0, length) + "..." :
@@ -17,7 +15,7 @@ function connectToDevTools(componentName) {
   return devTools;
 }
 
-root.addEventListener("SvelteRegisterComponent", (e) => {
+typeof window !== "undefined" && window.document.addEventListener("SvelteRegisterComponent", (e) => {
   let send = true;
 
   let {component, tagName, options} = e.detail;
